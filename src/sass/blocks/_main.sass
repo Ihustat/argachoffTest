@@ -3,9 +3,10 @@
     position: relative
     &__bg
         position: absolute
-        right: 0
+        right: -200%
         bottom: 0
         z-index: -1
+        transition: all 1s
     .scroll-block
         position: absolute
         bottom: 45px
@@ -16,12 +17,16 @@
             margin-top: 14px
             text-transform: uppercase
             font-size: 15px
+        .scroll-img
+            animation: scrollBlock 2s infinite
     &__wrapper
         display: flex
         justify-content: space-between
         align-items: start
     &__descr
         max-width: 570px
+        transform: translateX(-200%)
+        transition: all 1s
     &__title
         margin-bottom: 35px
         font-size: 55px
@@ -67,6 +72,8 @@
         background-color: #fff
         border-radius: 10px
         color: #000
+        transform: translateX(200%)
+        transition: all 1s
         &-range
             margin-bottom: 34px
 
@@ -112,3 +119,11 @@
 @for $i from 1 to 4
     .main__item:nth-child(#{$i}):before
         background: url('../images/icons/main/main-#{$i}.svg') center center/contain no-repeat
+
+@keyframes scrollBlock
+    0%
+        transform: translateY(0px)
+    50%
+        transform: translateY(-30px)
+    100%
+        transform: translateY(0px)

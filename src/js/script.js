@@ -1,6 +1,22 @@
 'use strict';
 
 document.addEventListener('DOMContentLoaded', () => {
+  //animation
+  const descr = document.querySelector('.main__descr'),
+    calc = document.querySelector('.main__calc'),
+    bg = document.querySelector('.main__bg');
+
+  descr.style.transform = 'translateX(0)';
+  calc.style.transform = 'translateX(0)';
+  bg.style.right = 0;
+
+  //scroll animation
+  window.addEventListener('wheel', (e) => {
+    e.deltaY > 0
+      ? (bg.style.right = parseInt(bg.style.right) - 1 + 'px')
+      : (bg.style.right = parseInt(bg.style.right) + 1 + 'px');
+  });
+
   ///nav
 
   const navList = document.querySelector('.nav__list'),
