@@ -13,9 +13,20 @@
         line-height: 120%
     &__text
         margin-bottom: 78px
+        max-width: 332px
         font-size: 24px
         font-weight: 400
         line-height: 28px
+        position: relative
+        &:after
+            content: ''
+            position: absolute
+            bottom: -11px
+            left: 0
+            background: #BAF1FF
+            width: 50%
+            height: 5px
+
     &__items
         display: flex
         flex-wrap: wrap
