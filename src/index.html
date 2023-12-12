@@ -175,9 +175,18 @@
             <div class="main__calc-range">
               <div class="calc-range__top">
                 <div class="calc__name">Площадь квартиры:</div>
-                <div class="calc-range__count">68м2</div>
+                <div class="calc-range__count">50м2</div>
               </div>
-              <input type="range" class="calc-tange__range" />
+              <div class="range__wrapper">
+                <input
+                  type="range"
+                  min="10"
+                  max="100"
+                  value="50"
+                  class="calc-range__range"
+                />
+                <div class="range-progress"></div>
+              </div>
             </div>
 
             <div class="main__calc-radio">

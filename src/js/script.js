@@ -31,4 +31,15 @@ document.addEventListener('DOMContentLoaded', () => {
     hamburger.classList.toggle('hamburger_active');
     navList.classList.toggle('nav__list_active');
   });
+
+  //range
+
+  const slider = document.querySelector('.calc-range__range'),
+    progress = document.querySelector('.range-progress'),
+    rangeCount = document.querySelector('.calc-range__count');
+
+  slider.addEventListener('input', (e) => {
+    progress.style.width = `${e.target.value - 3}%`;
+    rangeCount.textContent = `${e.target.value}м2`;
+  });
 });

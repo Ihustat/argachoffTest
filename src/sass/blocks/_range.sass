@@ -1,0 +1,35 @@
+.range__wrapper
+    width: 100%
+    position: relative
+    z-index: 5
+
+.calc-range__range
+    -webkit-appearance: none
+    width: 100%
+    height: 12px
+    background: #BAF1FF
+    outline: none
+    -webkit-transition: .2s
+    transition: opacity .2s
+    border-radius: 4px
+    cursor: pointer
+    &:hover
+        opacity: 1
+    &::-webkit-slider-thumb
+        appearance: none
+        width: 33px
+        height: 33px
+        border-radius: 100%
+        background: #302594
+        z-index: 5
+        position: relative
+
+.range-progress
+    position: absolute
+    content: ''
+    width: 43%
+    height: 12px
+    background-color: #BE69D5
+    top: 3px
+    border-radius: 4px
+    z-index: 1
