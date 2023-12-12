@@ -1,0 +1,56 @@
+@media (max-width: 1440px)
+    .nav__list
+        gap: 10px
+    .nav__list-item
+        font-size: 13px
+    .header__btn
+        font-size: 13px
+        padding: 0 10px
+    .nav-cross
+        width: 13px
+        transform: translateY(2px)
+
+@media (max-width: 1025px)
+    .hamburger
+        display: inline-block
+        position: relative
+    .logo
+        order: 3
+    .header__btn
+        order: 4
+    .nav__list
+        padding: 45px 0
+        flex-direction: column
+        gap: 0
+        justify-content: space-between
+        align-items: center
+        position: absolute
+        z-index: 14
+        top: 0
+        left: -150%
+        transition: all .3s
+        width: 100vw
+        height: 100vh
+        background: linear-gradient(100deg, #3625AF 0%, #C46BD5 98.82%)
+        &_active
+            left: 0
+    .nav__sublist
+        padding-left: 50%
+        height: 0
+        display: block
+        background-color: transparent
+        color: #fff
+        position: static
+        font-size: 12px
+        transition: all .3s
+    .nav__list-item
+        text-align: center
+
+    .nav__list-item_active .nav__sublist
+        height: 100%
+
+@media (max-width: 426px)
+    .header
+        flex-wrap: wrap
+        &__btn
+            width: 100%

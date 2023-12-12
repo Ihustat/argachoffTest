@@ -23,4 +23,12 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
   });
+
+  //hamburger
+  const hamburger = document.querySelector('.hamburger');
+
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('hamburger_active');
+    navList.classList.toggle('nav__list_active');
+  });
 });
