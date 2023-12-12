@@ -1,0 +1,83 @@
+.main
+    height: 100vh
+    &__wrapper
+        display: flex
+        justify-content: space-between
+        align-items: start
+    &__descr
+        max-width: 570px
+    &__title
+        margin-bottom: 35px
+        font-size: 55px
+        font-weight: 900
+        line-height: 120%
+    &__text
+        margin-bottom: 78px
+        font-size: 24px
+        font-weight: 400
+        line-height: 28px
+    &__items
+        display: flex
+        flex-wrap: wrap
+        gap: 67px
+    &__item
+        padding-left: 60px
+        max-width: 199px
+        font-size: 14px
+        font-weight: 500
+        line-height: 120%
+        position: relative
+        &::before
+            content: ''
+            position: absolute
+            top: 0
+            left: 0
+            width: 45px
+            height: 36px
+
+    &__calc
+        padding: 29px
+        width: 508px
+        background-color: #fff
+        border-radius: 10px
+        color: #000
+        &-range
+            margin-bottom: 34px
+
+    .calc
+        &__title
+            margin-bottom: 24px
+            max-width: 268px
+            font-size: 25px
+            line-height: 120%
+        &__name
+            font-size: 12px
+            font-weight: 400
+            line-height: 13px
+            text-transform: uppercase
+        &-range__top
+            margin-bottom: 21px
+            display: flex
+            justify-content: space-between
+            align-items: center
+        &-range__count
+            font-size: 17px
+            font-weight: 700
+            line-height: 20px
+            letter-spacing: 1px
+        &-radio__name
+            margin-bottom: 33px
+        &-radio__items
+            margin-bottom: 32px
+            display: flex
+            justify-content: space-between
+            align-items: center
+        &__btn
+            padding: 0 46px
+            display: block
+            max-width: 185px
+            margin: 0 auto
+
+@for $i from 1 to 4
+    .main__item:nth-child(#{$i}):before
+        background: url('../images/icons/main/main-#{$i}.svg') center center/contain no-repeat
