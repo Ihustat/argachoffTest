@@ -40,6 +40,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
   slider.addEventListener('input', (e) => {
     progress.style.width = `${e.target.value - 3}%`;
-    rangeCount.textContent = `${e.target.value}м2`;
+    rangeCount.innerHTML = `${e.target.value}м<sup>2</sup>`;
+  });
+
+  //radio
+  const radioBtns = document.querySelectorAll('.calc-radio__radio');
+
+  radioBtns.forEach((btn) => {
+    btn.addEventListener('input', () => {
+      radioBtns.forEach((item) => {
+        const img = document.querySelector(`label[for="${item.id}"] img`);
+
+        item.checked === true
+          ? (img.src = 'images/icons/radio-checked.png')
+          : (img.src = 'images/icons/radio.svg');
+      });
+    });
   });
 });

@@ -1,5 +1,21 @@
 .main
     min-height: 100vh
+    position: relative
+    &__bg
+        position: absolute
+        right: 0
+        bottom: 0
+        z-index: -1
+    .scroll-block
+        position: absolute
+        bottom: 45px
+        left: 50%
+        transform: translateX(-50%)
+        text-align: center
+        .scroll-text
+            margin-top: 14px
+            text-transform: uppercase
+            font-size: 15px
     &__wrapper
         display: flex
         justify-content: space-between
@@ -26,7 +42,6 @@
             background: #BAF1FF
             width: 50%
             height: 5px
-
     &__items
         display: flex
         flex-wrap: wrap
@@ -88,6 +103,11 @@
             display: block
             max-width: 185px
             margin: 0 auto
+        &-radio__radio
+            visibility: hidden
+
+.label-img
+    transform: translateY(-6px)
 
 @for $i from 1 to 4
     .main__item:nth-child(#{$i}):before

@@ -157,7 +157,7 @@
       <div class="container">
         <div class="main__wrapper">
           <div class="main__descr">
-            <h1 class="main__title">Ремонт под ключ от 2900 руб/м2.</h1>
+            <h1 class="main__title">Ремонт под ключ от 2900 руб/м<sup>2</sup>.</h1>
 
             <div class="main__text">
               При заказе ремонта делаем дизайн-проект в подарок
@@ -175,7 +175,7 @@
             <div class="main__calc-range">
               <div class="calc-range__top">
                 <div class="calc__name">Площадь квартиры:</div>
-                <div class="calc-range__count">50м2</div>
+                <div class="calc-range__count">50м<sup>2</sup></div>
               </div>
               <div class="range__wrapper">
                 <input
@@ -198,8 +198,18 @@
                     type="radio"
                     class="calc-radio__radio"
                     id="second"
+                    checked
                   />
-                  <label for="second">Вторичное жилье</label>
+                  <label for="second">
+                    <img
+                      class="label-img"
+                      src="images/icons/radio-checked.png"
+                      alt="radio"
+                    />
+                  </label>
+                  <label class="calc-radio__label" for="second"
+                    >Вторичное жилье</label
+                  >
                 </div>
                 <div class="calc-radio__wrapper">
                   <input
@@ -208,6 +218,12 @@
                     class="calc-radio__radio"
                     id="new"
                   />
+                  <label for="new">
+                    <img
+                      class="label-img"
+                      src="images/icons/radio.svg"
+                      alt="radio"
+                    />
                   <label for="new">Новостройка</label>
                 </div>
                 <div class="calc-radio__wrapper">
@@ -217,6 +233,12 @@
                     class="calc-radio__radio"
                     id="office"
                   />
+                  <label for="office">
+                    <img
+                      class="label-img"
+                      src="images/icons/radio.svg"
+                      alt="radio"
+                    />
                   <label for="office">Офис</label>
                 </div>
               </div>
@@ -231,6 +253,12 @@
                     class="calc-radio__radio"
                     id="1"
                   />
+                  <label for="1">
+                    <img
+                      class="label-img"
+                      src="images/icons/radio.svg"
+                      alt="radio"
+                    />
                   <label for="1">1</label>
                 </div>
                 <div class="calc-radio__wrapper">
@@ -240,6 +268,12 @@
                     class="calc-radio__radio"
                     id="2"
                   />
+                  <label for="2">
+                    <img
+                      class="label-img"
+                      src="images/icons/radio.svg"
+                      alt="radio"
+                    />
                   <label for="2">2</label>
                 </div>
                 <div class="calc-radio__wrapper">
@@ -249,6 +283,12 @@
                     class="calc-radio__radio"
                     id="3"
                   />
+                  <label for="3">
+                    <img
+                      class="label-img"
+                      src="images/icons/radio.svg"
+                      alt="radio"
+                    />
                   <label for="3">3+</label>
                 </div>
                 <div class="calc-radio__wrapper">
@@ -258,6 +298,12 @@
                     class="calc-radio__radio"
                     id="studio"
                   />
+                  <label for="studio">
+                    <img
+                      class="label-img"
+                      src="images/icons/radio.svg"
+                      alt="radio"
+                    />
                   <label for="studio">Студия</label>
                 </div>
               </div>
@@ -265,6 +311,11 @@
             <button class="btn calc__btn">Отправить</button>
           </div>
         </div>
+      </div>
+      <img src="images/bg/main-bg.png" alt="background" class="main__bg">
+      <div class="scroll-block">
+        <img src="images/icons/arrow-down.png" alt="arrow down" class="scroll-img">
+        <div class="scroll-text">SCROLL</div>
       </div>
     </section>
     <script src="js/script.min.js"></script>
